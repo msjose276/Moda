@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+{% if list_of_all_material_available %}
+        <ul class="nav flex-column">
+            {% for category in list_of_all_material_available %}
+              <li class="nav-item">
+                <a class="nav-link  col-2" href="#"><h4>{{ category.first.kind }}</h4></a>
+                <ul class="nav flex-column">
+                    {% for single_material in category %}
+                      <li class="nav-item">
+                          <a class="nav-link col-2" href="#"><p>{{ single_material.Name }}</p></a>
+                          {% if single_material.image.url %}
+{#                              <img class="nav-link" src="{{ single_material.image.url }}">#}
+{#                              <img src="../../media/uploads/bb.png" >#}
+{#                              #}
+                              <div class="card-deck col-4">
+                              <div class="card">
+                                <img class="card-img-top" src="{{ single_material.image.url }}" alt="Card image cap">
+                                <div class="card-footer">
+                                  <small class="text-muted">{{ single_material.Name }}</small>
+                                </div>
+                              </div>
+                              </div>
+                          {% endif %}
+
+
+                      </li>
+                    {% endfor %}
+                </ul>
+
+              </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Man material is available.</p>
+
+{% endif %}
+
+
+
+
+

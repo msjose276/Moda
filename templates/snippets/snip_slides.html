@@ -1,0 +1,66 @@
+{% load staticfiles %}
+
+
+<div class="">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+
+        {% if list_of_slides %}
+
+            <ol class="carousel-indicators">
+            {% for slide in list_of_slides %}
+                {% if forloop.counter %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{ slide.Image.url }}"></li>
+
+                {% else %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{ slide.Image.url }}" class="active"></li>
+
+                {% endif %}
+            {% endfor %}
+            </ol>
+
+
+        {% else %}
+                <p>No slides material is available.</p>
+
+        {% endif %}
+
+        {% if list_of_slides %}
+
+            {% for slide in list_of_slides %}
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100 high-400" src="{{ slide.Image.url }}" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{ slide.Title }}</h5>
+                            <p>{{ slide.Comments }}</p>
+                          </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        {% else %}
+                <p>No slides material is available.</p>
+
+        {% endif %}
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+</div>
+
+
+
+
+
+
+

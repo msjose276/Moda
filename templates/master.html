@@ -1,0 +1,132 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">#}
+
+
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap-grid.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap-grid.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap-reboot.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap-reboot.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap_4.1/css/bootstrap.min.css" %}">
+
+    <script src="{% static 'bootstrap_4.1/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'bootstrap_4.1/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap_4.1/js/bootstrap.js' %}"></script>
+    <script src="{% static 'bootstrap_4.1/js/bootstrap.min.js' %}"></script>
+
+
+
+
+{#    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">#}
+
+</head>
+<body>
+
+{#    include the header#}
+    {% include 'nav_bar.html' %}
+{#---------------------------------------------#}
+
+    <div class="high-70 ">
+
+
+    </div>
+    <div class="pad-top-bottom-100">
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+
+
+
+{#---------------------------------------------#}
+{#    include the footer#}
+    {% include 'footer.html' %}
+
+</body>
+</html>
+
+
+
+
+
+
+
+{##}
+{#{% load staticfiles %}#}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">#}
+{##}
+{##}
+{#    <title>Title</title>#}
+{##}
+{#    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">#}
+{#    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">#}
+{##}
+{#</head>#}
+{#<body>#}
+{##}
+{#    include the header#}
+{#    {% include 'nav_bar.html' %}#}
+{#---------------------------------------------#}
+{##}
+{#    <h1 class="high-100 background-color-gray text-color-yellowgreen">hello world</h1>#}
+{#    {% include 'snippets/snip_slides.html' %}#}
+{##}
+{#    {% block content %}#}
+{#        {% include 'snippets/snippet_all_material.html' %}#}
+{#    {% endblock %}#}
+{##}
+{#    <div class="card-deck">#}
+{#  <div class="card">#}
+{#    <img class="card-img-top" src="{% static 'img/bb.png' %}" alt="Card image cap">#}
+{#    <div class="card-body">#}
+{#      <h5 class="card-title">Card title</h5>#}
+{#      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>#}
+{#    </div>#}
+{#    <div class="card-footer">#}
+{#      <small class="text-muted">Last updated 3 mins ago</small>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="card">#}
+{#    <img class="card-img-top" src="{% static 'img/bb.png' %}" alt="Card image cap">#}
+{#    <div class="card-body">#}
+{#      <h5 class="card-title">Card title</h5>#}
+{#      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>#}
+{#    </div>#}
+{#    <div class="card-footer">#}
+{#      <small class="text-muted">Last updated 3 mins ago</small>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="card">#}
+{#    <img class="card-img-top" src="{% static 'img/bb.png' %}" alt="Card image cap">#}
+{#    <div class="card-body">#}
+{#      <h5 class="card-title">Card title</h5>#}
+{#      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>#}
+{#    </div>#}
+{#    <div class="card-footer">#}
+{#      <small class="text-muted">Last updated 3 mins ago</small>#}
+{#    </div>#}
+{#  </div>#}
+{#</div>#}
+{##}
+{##}
+{##}
+{##}
+{#---------------------------------------------#}
+{#    include the footer#}
+{#    {% include 'footer.html' %}#}
+{##}
+{#</body>#}
+{#</html>#}
